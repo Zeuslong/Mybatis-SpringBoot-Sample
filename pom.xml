@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.com.hanyuxiao</groupId>
-    <artifactId>simple-mybatis-springboot</artifactId>
+    <artifactId>Mybatis-SpringBoot-Sapmle</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>simple-mybatis-springboot</name>
-    <description>Mybatis-springboot 最佳实践</description>
+    <name>Mybatis-SpringBoot-Sample</name>
+    <description>Mybatis-SpringBoot-Starter 最佳实践</description>
 
     <properties>
         <java.version>1.8</java.version>
