@@ -1,4 +1,4 @@
-package cn.com.hanyuxiao.simplemybatisspringboot.user;
+package cn.com.hanyuxiao.sample.mybatis.springboot.user;
 
 /**
  * 实体类，含有用户名称与用户 id 两个属性。

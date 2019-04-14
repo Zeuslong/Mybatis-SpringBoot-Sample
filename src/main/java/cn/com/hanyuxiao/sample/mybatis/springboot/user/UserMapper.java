@@ -1,4 +1,4 @@
-package cn.com.hanyuxiao.simplemybatisspringboot.user;
+package cn.com.hanyuxiao.sample.mybatis.springboot.user;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

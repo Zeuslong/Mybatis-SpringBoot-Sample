@@ -1,4 +1,4 @@
-package cn.com.hanyuxiao.simplemybatisspringboot.user;
+package cn.com.hanyuxiao.sample.mybatis.springboot.user;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -22,5 +22,4 @@ public class UserTest {
         Assert.assertNotNull(user);
         Assert.assertEquals("test", user.getUserName());
     }
-
 }
