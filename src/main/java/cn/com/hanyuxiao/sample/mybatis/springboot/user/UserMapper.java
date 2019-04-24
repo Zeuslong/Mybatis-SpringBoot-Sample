@@ -14,4 +14,9 @@ public interface UserMapper {
      *           不能为空，必须要大于 0
      */
     User selectById(@Param(value = "id") long id);
+
+    /**
+     * 插入用户记录。
+     */
+    void insert(User user);
 }

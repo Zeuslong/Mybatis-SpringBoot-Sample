@@ -7,12 +7,16 @@
     <resultMap id="user" type="cn.com.hanyuxiao.sample.mybatis.springboot.user.User">
         <id property="id" javaType="java.lang.Long" column="id" jdbcType="BIGINT"/>
         <result property="userName" javaType="java.lang.String" column="user_name" jdbcType="VARCHAR"/>
+        <result property="status" javaType="cn.com.hanyuxiao.sample.mybatis.springboot.user.UserStatusEnum" column="status" jdbcType="INTEGER"
+                typeHandler="cn.com.hanyuxiao.sample.mybatis.springboot.handler.UserStatusEnumTypeHandler"/>
     </resultMap>
 
     <select id="selectById" resultMap="user">
-        select id, user_name
-        from user
-        where id = #{id};
+        select id, user_name,status from user where id = #{id};
     </select>
+
+    <insert id="insert" parameterType="cn.com.hanyuxiao.sample.mybatis.springboot.user.User">
+        insert into user (id, user_name, status) value (#{id}, #{userName}, #{status, typeHandler=cn.com.hanyuxiao.sample.mybatis.springboot.handler.UserStatusEnumTypeHandler});
+    </insert>
 
 </mapper>
