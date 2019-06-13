@@ -11,12 +11,16 @@
                 typeHandler="cn.com.hanyuxiao.sample.mybatis.springboot.handler.UserStatusEnumTypeHandler"/>
     </resultMap>
 
+    <sql id="userColumns">
+        id, user_name, status
+    </sql>
+
     <select id="selectById" resultMap="user">
-        select id, user_name,status from user where id = #{id};
+        select <include refid="userColumns"/> from user where id = #{id};
     </select>
 
     <insert id="insert" parameterType="cn.com.hanyuxiao.sample.mybatis.springboot.user.User">
-        insert into user (id, user_name, status) value (#{id}, #{userName}, #{status, typeHandler=cn.com.hanyuxiao.sample.mybatis.springboot.handler.UserStatusEnumTypeHandler});
+        insert into user (<include refid="userColumns"/>) value (#{id}, #{userName}, #{status, typeHandler=cn.com.hanyuxiao.sample.mybatis.springboot.handler.UserStatusEnumTypeHandler});
     </insert>
 
 </mapper>
